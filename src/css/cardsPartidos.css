@@ -1,0 +1,25 @@
+.cards-partidos {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #3c1a1a;
+  padding: 10px 0;
+}
+.hora {
+  width: 20%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 700;
+}
+.equipos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+}
+.equipos img {
+  width: 30px;
+  height: 30px;
+}

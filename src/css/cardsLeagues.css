@@ -1,0 +1,25 @@
+.cards-leagues {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 1px solid #3c1a1a;
+  border-radius: 5px;
+}
+.cards-leagues-header {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 5px 5px;
+  gap: 5px;
+}
+.cards-leagues-header img {
+  width: 20px;
+  height: 20px;
+}
+.cards-leagues-header h2 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.cards-leagues-header p {
+  font-size: 16px;
+  font-weight: 400;
+}
