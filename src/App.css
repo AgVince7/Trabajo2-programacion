@@ -13,7 +13,6 @@ body {
   color: var(--color-texto);
 }
 .header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,11 +48,24 @@ body {
 .nav-link:hover {
   color: var(--color-texto);
 }
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.section-games {
+  display: inline-block;
+  width: 80%;
+  background: #160606;
+  border-right: 1px solid #3c1a1a;
+  padding: 25px 20px;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .aside {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 240px;
+  display: inline-block;
+  width: 20%;
   background: #160606;
   border-right: 1px solid #3c1a1a;
   padding: 25px 20px;
