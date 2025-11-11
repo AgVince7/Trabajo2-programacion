@@ -1,4 +1,5 @@
 import "./App.css";
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 
 function App() {
@@ -89,6 +90,16 @@ function App() {
           )}
         </main>
       </>
+=======
+import { Aside } from "./components/Aside";
+import { Header } from "./components/header";
+
+function App() {
+  return (
+    <>
+      <Header />
+      <Aside />
+>>>>>>> 471d44fa44625bce7c693916088f78c20504294b
     </>
   );
 }
