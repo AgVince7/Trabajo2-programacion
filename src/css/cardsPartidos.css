@@ -4,26 +4,29 @@
   border-top: 1px solid var(--color-secundario);
   padding: 15px 0;
   width: 100%;
-  gap: 20px;
 }
 
 .hora {
   width: 15%;
+  height: 100%;
   font-size: 14px;
   font-weight: 700;
   text-align: center;
   flex-shrink: 0;
+  border-right: 1px solid var(--color-secundario);
 }
 
-.equipos {
+.equipos,
+.cards-partidos-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
+  width: 100%;
   gap: 15px;
 }
 
-.equipo1, .equipo2 {
+.equipo1,
+.equipo2 {
   display: flex;
   align-items: center;
   gap: 10px;
