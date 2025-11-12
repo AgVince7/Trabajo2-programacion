@@ -63,3 +63,110 @@
   height: 30px;
   flex-shrink: 0;
 }
+
+.hora.live,
+.equipos > div:nth-child(2) span.live {
+  color: #ff0000;
+}
+
+/* Media Queries para Tablets */
+@media (max-width: 1024px) {
+  .cards-partidos {
+    padding: 12px 0;
+  }
+
+  .hora {
+    width: 12%;
+    font-size: 13px;
+  }
+
+  .equipos {
+    gap: 10px;
+  }
+
+  .equipos > div:nth-child(2) {
+    font-size: 15px;
+  }
+}
+
+/* Media Queries para Móviles */
+@media (max-width: 768px) {
+  .cards-partidos {
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .hora {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--color-secundario);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .equipos {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .equipo1,
+  .equipo2 {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .equipo1 {
+    order: 1;
+  }
+
+  .equipos > div:nth-child(2) {
+    order: 2;
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 0;
+  }
+
+  .equipo2 {
+    order: 3;
+  }
+
+  .equipos img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Media Queries para Móviles pequeños */
+@media (max-width: 480px) {
+  .cards-partidos {
+    padding: 8px 0;
+  }
+
+  .hora {
+    font-size: 11px;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+  }
+
+  .equipos {
+    gap: 10px;
+  }
+
+  .equipos > div:nth-child(2) {
+    font-size: 16px;
+    padding: 6px 0;
+  }
+
+  .equipos img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .equipo1 span,
+  .equipo2 span {
+    font-size: 13px;
+  }
+}

@@ -23,3 +23,55 @@
   font-size: 16px;
   font-weight: 400;
 }
+
+/* Media Queries para Tablets */
+@media (max-width: 1024px) {
+  .cards-leagues {
+    margin-bottom: 15px;
+  }
+
+  .cards-leagues-header h2 {
+    font-size: 14px;
+  }
+}
+
+/* Media Queries para Móviles */
+@media (max-width: 768px) {
+  .cards-leagues {
+    margin-bottom: 12px;
+    border-radius: 4px;
+  }
+
+  .cards-leagues-header {
+    padding: 8px 0 8px 8px;
+  }
+
+  .cards-leagues-header img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cards-leagues-header h2 {
+    font-size: 13px;
+  }
+}
+
+/* Media Queries para Móviles pequeños */
+@media (max-width: 480px) {
+  .cards-leagues {
+    margin-bottom: 10px;
+  }
+
+  .cards-leagues-header {
+    padding: 6px 0 6px 6px;
+  }
+
+  .cards-leagues-header img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cards-leagues-header h2 {
+    font-size: 12px;
+  }
+}

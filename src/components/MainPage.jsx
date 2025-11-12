@@ -2,12 +2,11 @@ import { useState } from "react";
 import { Aside } from "./Aside";
 import { CardsLeagues } from "./CardsLeagues";
 
-export const MainPage = ({ leagues }) => {
+export const MainPage = ({ leagues, isMenuOpen, onMenuClose }) => {
   const [selectedLeague, setSelectedLeague] = useState(null);
   const [selectedLeagueData, setSelectedLeagueData] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Mapeo de nombres de ligas a IDs y nombres para la API
   const leagueIdMap = {
     Inicio: {
       id: "",
@@ -28,7 +27,6 @@ export const MainPage = ({ leagues }) => {
     LPF: { id: "hc/72_224_8_16", name: "LPF", apiId: "hc" },
   };
 
-  // URL base de la API para ligas específicas desde .env
   const API_LEAGUE_URL = import.meta.env.VITE_API_LEAGUE_URL;
 
   const handleLeagueSelect = async (leagueName) => {
@@ -57,13 +55,11 @@ export const MainPage = ({ leagues }) => {
       const response = await fetch(apiUrl);
       const data = await response.json();
 
-      // La API devuelve { TTL, games: [...] }
-      // Necesitamos transformarlo al formato que espera CardsLeagues: { id, name, games }
       if (data.games && Array.isArray(data.games)) {
         const leagueData = {
-          id: leagueInfo.apiId, // ID para la imagen de la liga
-          name: leagueInfo.name, // Nombre de la liga
-          games: data.games, // Array de partidos
+          id: leagueInfo.apiId,
+          name: leagueInfo.name,
+          games: data.games,
         };
         setSelectedLeagueData([leagueData]);
       } else {
@@ -78,7 +74,6 @@ export const MainPage = ({ leagues }) => {
     }
   };
 
-  // Determinar qué datos mostrar
   const leaguesToDisplay = selectedLeagueData || leagues;
 
   return (
@@ -86,6 +81,8 @@ export const MainPage = ({ leagues }) => {
       <Aside
         onLeagueSelect={handleLeagueSelect}
         selectedLeague={selectedLeague}
+        isOpen={isMenuOpen}
+        onClose={onMenuClose}
       />
       <main>
         <section className="section-games">

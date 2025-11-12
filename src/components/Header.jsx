@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export const Header = () => {
+export const Header = ({ onMenuToggle, isMenuOpen }) => {
   useEffect(() => {
     if (localStorage.getItem("tema") === "alternativo") {
       document.body.classList.add("tema-alternativo");
@@ -15,6 +15,17 @@ export const Header = () => {
 
   return (
     <header className="header">
+      <button
+        className="menu-toggle"
+        onClick={onMenuToggle}
+        aria-label="Toggle menu"
+      >
+        <span className={`hamburger ${isMenuOpen ? "active" : ""}`}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
       <section className="logo-area">
         <img src="/logo.png" alt="logo" />
         <h1 className="logo-text">Fútbol Al Instante</h1>

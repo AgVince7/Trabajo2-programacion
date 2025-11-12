@@ -8,29 +8,37 @@ function App() {
   const [leagues, setLeagues] = useState([]);
   const [loading, setLoading] = useState(true);
   const [boolTime, setBoolTime] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   setTimeout(() => {
     setBoolTime(!boolTime);
   }, 10000);
 
-  const fetchGames = async () => {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    setLeagues(data.leagues);
-    setLoading(false);
-  };
-
   useEffect(() => {
+    const fetchGames = async () => {
+      const response = await fetch(API_URL);
+      const data = await response.json();
+      setLeagues(data.leagues);
+      setLoading(false);
+    };
+
     fetchGames();
-  }, [boolTime]);
+  }, [boolTime, API_URL]);
 
   return (
     <>
-      <Header />
+      <Header
+        onMenuToggle={() => setIsMenuOpen(!isMenuOpen)}
+        isMenuOpen={isMenuOpen}
+      />
       {loading ? (
         <div className="global-loading">Cargando datos...</div>
       ) : (
-        <MainPage leagues={leagues} />
+        <MainPage
+          leagues={leagues}
+          isMenuOpen={isMenuOpen}
+          onMenuClose={() => setIsMenuOpen(false)}
+        />
       )}
     </>
   );
