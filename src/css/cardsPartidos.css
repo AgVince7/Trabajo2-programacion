@@ -1,7 +1,7 @@
 .cards-partidos {
   display: flex;
   align-items: center;
-  border-top: 1px solid #3c1a1a;
+  border-top: 1px solid var(--color-secundario);
   padding: 10px 0;
 }
 .hora {

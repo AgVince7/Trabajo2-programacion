@@ -2,12 +2,13 @@
 @import "./css/cardsLeagues.css";
 @import "./css/cardsPartidos.css";
 .header {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  background: #1d0b0b;
-  border-bottom: 1px solid #3c1a1a;
+  height: var(--header-height);
+  background: var(--color-primario);
+  border-bottom: 1px solid var(--color-secundario);
   display: flex;
   align-items: center;
   padding: 0 30px;
@@ -30,51 +31,60 @@
 }
 .nav-link {
   text-decoration: none;
-  color: #c2bcbc;
+  color:  var(--color-texto);
   font-size: 14px;
   transition: 0.2s;
 }
 .nav-link:hover {
-  color: var(--color-texto);
-}
-.main {
-  display: flex;
-  justify-content: space-between;
-}
-.section-games {
-  display: inline-block;
-  width: 80%;
-  background: rgb(172, 153, 153);
-  border-right: 1px solid #3c1a1a;
-  padding: 25px 20px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  color: var(--color-texto-secundario);
 }
 .aside {
-  display: inline-block;
-  width: 20%;
-  background: #160606;
-  border-right: 1px solid #3c1a1a;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  bottom: 0;
+  width: var(--aside-width);
+  background: var(--color-primario);
+  border-right: 1px solid var(--color-secundario);
   padding: 25px 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 900;
+}
+main {
+  margin-top: var(--header-height);
+  margin-left: var(--aside-width);
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(100% - var(--aside-width));
+}
+.section-games {
+  display: block;
+  width: 100%;
+  background: var(--color-primario);
+  padding: 25px 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 .section-title {
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #cfcfcf;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color:  var(--color-texto);
+  text-align: center;
 }
 .side-item {
   display: block;
   padding: 12px;
   margin-bottom: 10px;
   text-decoration: none;
-  color: #d9d9d9;
+  color:  var(--color-texto);
   border-radius: 6px;
   transition: 0.2s;
 }
 .side-item:hover {
-  background: #311010;
-  color: var(--color-texto);
+  background: var(--color-secundario);
+  color: var(--color-texto-secundario);
 }
 img {
   width: 30px;

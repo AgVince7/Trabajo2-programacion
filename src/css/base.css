@@ -1,5 +1,10 @@
 :root {
-  --color-texto: #ffffff;
+  --color-texto: #f0f0f0;
+  --color-texto-secundario: grey;
+  --color-primario: #0b1d0d;
+  --color-secundario: #005807;
+  --aside-width: 260px;
+  --header-height: 60px;
 }
 * {
   margin: 0;
@@ -9,6 +14,6 @@
   list-style: none;
 }
 body {
-  background: #160606;
+  background: var(--color-primario);
   color: var(--color-texto);
 }

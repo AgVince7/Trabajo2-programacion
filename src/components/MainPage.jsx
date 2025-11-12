@@ -3,8 +3,8 @@ import { CardsLeagues } from "./CardsLeagues";
 export const MainPage = ({ leagues }) => {
   return (
     <>
+      <Aside />
       <main>
-        <Aside />
         <section className="section-games">
           {leagues.map((league) => (
             <CardsLeagues key={league.id} league={league} />
