@@ -2,7 +2,6 @@ import { CardsPartidos } from "./CardsPartidos";
 
 export const CardsLeagues = ({ league }) => {
   const urlImagen = `https://api.promiedos.com.ar/images/league/${league.id}/1`;
-
   return (
     <>
       <section className="cards-leagues">

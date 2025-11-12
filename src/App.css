@@ -87,6 +87,11 @@ main {
   background: var(--color-secundario);
   color: var(--color-texto-secundario);
 }
+.side-item.active {
+  background: var(--color-secundario);
+  color: var(--color-texto-secundario);
+  font-weight: 700;
+}
 img {
   width: 30px;
   height: 30px;
