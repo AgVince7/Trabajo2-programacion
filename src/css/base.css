@@ -17,3 +17,12 @@ body {
   background: var(--color-primario);
   color: var(--color-texto);
 }
+
+body.tema-alternativo {
+  --color-primario: #d6d6d6;
+  --color-secundario: #005807;
+  --color-texto: #0b1d0d;
+  --color-texto-secundario: #ffffff;
+}
+
+
