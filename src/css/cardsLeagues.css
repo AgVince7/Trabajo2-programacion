@@ -24,7 +24,6 @@
   font-weight: 400;
 }
 
-/* Media Queries para Tablets */
 @media (max-width: 1024px) {
   .cards-leagues {
     margin-bottom: 15px;
@@ -35,7 +34,6 @@
   }
 }
 
-/* Media Queries para Móviles */
 @media (max-width: 768px) {
   .cards-leagues {
     margin-bottom: 12px;
@@ -56,7 +54,6 @@
   }
 }
 
-/* Media Queries para Móviles pequeños */
 @media (max-width: 480px) {
   .cards-leagues {
     margin-bottom: 10px;
