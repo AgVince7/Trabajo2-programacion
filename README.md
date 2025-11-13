@@ -39,6 +39,7 @@ Es exclusivamente una **interfaz de visualización** que consume y muestra infor
 ## Dependencias externas
 
 **Nombre API**: Promiedos
+
 **Link API**: https://api.promiedos.com.ar/games/today
 
 La aplicación se integra con tres servicios externos:
@@ -62,7 +63,7 @@ Encuestado cada 10 segundos por `App.jsx`.
 2. **API específica de la liga (VITE_API_LEAGUE_URL):**
    Devuelve datos detallados para una sola liga.
    Accedido por `MainPage.jsx` sobre la selección del usuario en:
-   `src/componentes/Página principal.jsx` (líneas 44–56).
+   `src/componentes/MainPage.jsx` (líneas 44–56).
    Los puntos finales siguen el patrón:
 
 ```
